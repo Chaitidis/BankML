@@ -49,8 +49,7 @@ def preprocess_data(df):
     return df
 
 bank_data = load_bank_marketing_dataset() # Load dataset
-processed_data = preprocess_data(bank_data) # Process data 
-df = processed_data # assign the processed_data to the dataframe df
+df = preprocess_data(bank_data) # Process data 
 
 def optimize_memory_usage(df):
     """
@@ -82,6 +81,4 @@ def optimize_memory_usage(df):
     return df
 
 df = optimize_memory_usage(df)
-print("Creating the csv, please wait...")
 df.to_csv('Bank_data.csv', index=False)
-print("Done!")
