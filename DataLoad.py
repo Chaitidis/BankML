@@ -48,8 +48,6 @@ def preprocess_data(df):
     df[numeric_columns] = scaler.fit_transform(df[numeric_columns])
     return df
 
-bank_data = load_bank_marketing_dataset() # Load dataset
-df = preprocess_data(bank_data) # Process data 
 
 def optimize_memory_usage(df):
     """
@@ -80,5 +78,7 @@ def optimize_memory_usage(df):
                 pass
     return df
 
-df = optimize_memory_usage(df)
+bank_data = load_bank_marketing_dataset() # Load dataset
+df = preprocess_data(bank_data) # def Process data 
+df = optimize_memory_usage(df) # def Optimize Memory Usage
 df.to_csv('Bank_data.csv', index=False)
