@@ -1,4 +1,4 @@
-# Bank_ML
+# BankML
 Bank Marketing. Portuguese banking institution, classification for deposit subscription
 
 
